@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-stack-overflow"
+    }
+  },
+  "defaultProject": "angular-stack-overflow",
+  "cli": {
+    "analytics": "6c8823d5-c9dd-4d9e-90b8-6c34a7d5405f"
+  }
 }
