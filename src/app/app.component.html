@@ -1,1 +1,48 @@
-<h1>{{title}}</h1>
+<nb-layout>
+
+  <nb-layout-header fixed>
+   <h1>{{title}}</h1>
+  </nb-layout-header>
+  
+  <nb-layout-column>
+    
+    <nb-card  class="content" accent="info" size="small" *ngFor="let question of questions |paginate: { itemsPerPage: 5, currentPage: p } ">
+      <nb-card-header>
+         
+         <span>{{question.title}}</span>
+         
+      </nb-card-header>
+
+      <nb-card-body class="list-group1">
+        
+         <ul  *ngFor="let tag of question.tags">
+            <li >{{tag}}</li>
+         </ul>
+      </nb-card-body>
+      <nb-card-footer  style="position: relative;">
+         <!-- <nb-badge text="Created On :{{question.last_activity_date| date: 'dd/MM/yyyy' }}" status="primary" ></nb-badge>
+         <nb-badge text="view Count:{{question.view_count}}" status="warning"></nb-badge>
+         <nb-badge text="Answer Count:{{question.answer_count}}" status="warning" ></nb-badge> -->
+         <div class="list-group2">
+            <div>
+               Created On :{{question.last_activity_date| date: 'dd/MM/yyyy'}}
+            </div>
+            <div>
+               view Count:{{question.view_count}}
+            </div>
+            <div>
+               Answer Count:{{question.answer_count}}
+            </div>
+         </div>
+         
+      </nb-card-footer>
+    </nb-card>
+    
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </nb-layout-column>
+  
+  <nb-layout-footer>
+   © AmareshJakka 2021
+  </nb-layout-footer>
+
+</nb-layout>

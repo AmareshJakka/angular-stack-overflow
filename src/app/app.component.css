@@ -1,0 +1,19 @@
+
+
+.list-group1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-gap:20px;
+   
+}
+.list-group2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap:20px;
+}
+
+.content{
+    height: 50%;
+    width: 70%;
+    
+}
